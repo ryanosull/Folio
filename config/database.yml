@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: folio_production
-  username: folio
-  password: <%= ENV["FOLIO_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # <<: *default
+  # database: folio_production
+  # username: folio
+  # password: <%= ENV["FOLIO_DATABASE_PASSWORD"] %>
